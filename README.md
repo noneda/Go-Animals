@@ -19,7 +19,8 @@ Ubicado en
 ## Visión
 
 	Convertirnos en el referente principal en la comunidad para los amantes de las mascotas,
-	siendo reconocidos por nuestra excelencia en productos, servicios y compromiso con el cuidado y la felicidad de los animales
+	siendo reconocidos por nuestra excelencia en productos, servicios y compromiso con el
+	cuidado y la felicidad de los animales
 
 
 Donde se contacta con ella por medio de *WhatsApp* para llegar a la conclusión de la necesidades que ella exige para la creación del Proyecto
