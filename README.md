@@ -5,7 +5,11 @@ Tener en cuenta que esta App se va Aplicar por medio de la Metodologia RUP
 Esta empresa se basa a la **Venta de Comida de Animales Domésticos** donde el representante es
 
 *Kellin Alejandra Guerrero Leiva*
-*cc:* 
+*cc: 1000786103*
+
+Ubicado en
+
+*Soacha - Cll 46 # 11-11* en el Barrio *León XIII*
 
 Donde se contacta con ella por medio de *WhatsApp* para llegar a la conclusión de la necesidades que ella exige para la creación del Proyecto
 
@@ -69,39 +73,59 @@ Donde se presentan las siguientes Necesidades que ellas No Presentación
 	refleje la disponibilidad de productos, lo que permitirá a los empleados verificar
 	el stock en tiempo real. Por último, el sistema generará informes detallados sobre
 	el estado del inventario y los precios, en conclusión este SAC está destinado a ser
-	una herramienta importante para Go Animals.
-
+	una herramienta importante para Go Animals.### FUNCIONES DEL PRODUCTO
 
 ### FUNCIONES DEL PRODUCTO 
 
-****Usar con formato de historias de Usuario***
+	Historia de Usuario 1: Organización de Productos
 
-- Organización de Productos:
-	- El SAC registra y clasifica los productos de manera ordenada.
-	- Cada producto tiene información relevante, como nombre, descripción y categoría.
-	+ Facilita la búsqueda y actualización de datos, optimizando la gestión interna.
-- Gestión de Precios:
-	+ Los precios de los productos están disponibles en el sistema.
-	+ Se pueden actualizar fácilmente según las necesidades del negocio o cambios en el mercado.
-- Control de inventario:
-	+ El sistema mantiene un registro actualizado de la cantidad de productos disponibles.
-- Informes y Análisis:
-	+ El SAC genera informes sobre el estado del inventario y los precios.**
+		Como SAC, quiero poder registrar y clasificar los productos de manera ordenada en el sistema para facilitar la búsqueda y actualización de datos, optimizando así nuestra gestión interna.
+
+		Criterios de Aceptación:
+		1. El sistema debe permitir registrar nuevos productos con su nombre, descripción y categoría.
+		2. Los productos deben ser clasificados de manera ordenada y fácilmente accesible en el sistema.
+		3. Debe ser posible actualizar la información de los productos de forma sencilla.
+		4. Se debe garantizar que la organización de los productos en el sistema optimice la gestión interna del SAC.
+
+	Historia de Usuario 2: Gestión de Precios
+
+		Como SAC, necesito que los precios de los productos estén disponibles en el sistema y se puedan actualizar fácilmente según las necesidades del negocio o cambios en el mercado.
+
+		Criterios de Aceptación:
+		1. El sistema debe permitir ingresar los precios de los productos de forma clara y organizada.
+		2. Debe ser posible actualizar los precios de los productos de manera rápida y sencilla.
+		3. Los cambios en los precios deben reflejarse inmediatamente en el sistema.
+		4. Se debe garantizar que la gestión de precios sea flexible y adaptable a las necesidades del negocio y cambios en el mercado.
+
+	Historia de Usuario 3: Control de Inventario
+
+		Como SAC, necesito que el sistema mantenga un registro actualizado de la cantidad de productos disponibles para poder gestionar eficientemente el inventario.
+
+		Criterios de Aceptación:
+		1. El sistema debe llevar un registro preciso de la cantidad de cada producto en existencia.
+		2. Debe ser posible actualizar el inventario automáticamente cuando se realicen ventas o ingresos de productos.
+		3. Se deben generar alertas o notificaciones cuando la cantidad de un producto alcance un nivel mínimo.
+		4. Se debe garantizar que el control de inventario sea fiable y preciso.
+
+	Historia de Usuario 4: Informes y Análisis
+
+		Como SAC, quiero que el sistema genere informes sobre el estado del inventario y los precios para poder realizar análisis y tomar decisiones informadas.
+
+		Criterios de Aceptación:
+		1. El sistema debe ser capaz de generar informes detallados sobre el estado actual del inventario, incluyendo cantidades disponibles de cada producto.
+		2. Se deben poder generar informes sobre los precios de los productos, incluyendo históricos de cambios.
+		3. Los informes deben ser claros, organizados y fácilmente comprensibles.
+				4. Debe ser posible exportar los informes en formatos adecuados para su análisis adicional.
+				5. Se debe garantizar que la generación de informes sea eficiente y pueda realizarse en intervalos regulares según sea necesario.
 
 ### CARACTERÍSTICAS DE LOS USUARIOS
 
-***Expecificar cuales son ROLES***
-
-	El Sistema Administrativo para Go Animals Pet Store está diseñado para satisfacer las
-	necesidades de usuario específicos como el nivel de experiencia dentro del contexto de
-	una tienda de mascotas. Al considerar características como el nivel de experiencia,
-	habilidades tecnológicas, preferencias y contexto laboral, el SAC se adapta para ofrecer una
-	experiencia de usuario óptima. Esto asegura que los usuarios puedan gestionar eficientemente
-	el inventario, actualizar precios, y analizar datos relevantes, optimizados así la
-	administración de la tienda y mejorando la experiencia de la compra. 
-
-
-#  Sistema
+	1. Administrador (Usuario:
+		- Responsable de la gestión general de la tienda de mascotas.
+		- Tiene acceso completo al Sistema Administrativo para Go Animals Pet Store.
+		- Puede gestionar eficientemente el inventario, actualizar precios y analizar datos relevantes.
+		- Se espera que tenga un nivel de experiencia adecuado en la administración de tiendas, así como habilidades tecnológicas básicas para utilizar el SAC de manera efectiva.
+		- Busca mejorar la experiencia de compra de los clientes y optimizar la administración de la tienda mediante el uso del SAC.#  Sistema
 
 ## Como se va a implementar
 
