@@ -23,27 +23,56 @@ Donde se presentan las siguientes Necesidades que ellas No Presentación
 
 ## Introducción
 
-	El presente documento establece los requisitos esenciales para el desarrollo de un sistema administrativo (SAC) para gestionar eficientemente las actividades de contabilidad y administración de Go Animals pet store.
+	El presente documento establece los requisitos esenciales para el desarrollo de un sistema
+	administrativo (SAC) para gestionar eficientemente las actividades de contabilidad y
+	administración de Go Animals pet store.
 
 ### OBJETIVO
 
-	El objetivo general de este proyecto es implementar un sistema administrativo (SAC) eficiente para Go Animals pet store, con el propósito de optimizar la gestión interna, mejorar el control financiero y garantizar la sostenibilidad del negocio. 
+	El objetivo general de este proyecto es implementar un sistema administrativo (SAC)
+	eficiente para Go Animals pet store, con el propósito de optimizar la gestión interna,
+	mejorar el control financiero y garantizar la sostenibilidad del negocio.
 
 ### ÁMBITO DEL SISTEMA
 
-	Go Animals Pet Store es una tienda de comidas de animales domésticos al que se le creará  un SAC que establece los límites y alcance de la solución que se desarrollará para Go Animals Pet Store. Teniendo en cuenta  que no se abordará áreas ajenas a la administración y contabilidad.
+	Go Animals Pet Store es una tienda de comidas de animales domésticos al que se le creará
+	un SAC que establece los límites y alcance de la solución que se desarrollará para
+	Go Animals Pet Store. Teniendo en cuenta  que no se abordará áreas ajenas a la
+	administración y contabilidad.
 
 
 ### VISIÓN GENERAL DEL DOCUMENTO
 
-	La misión del Sistema Administrativo (SAC) para Go Animals Pet Store es proporcionar una herramienta integral que revolucione la gestión de productos e inventario, asegurando una operación comercial eficiente y efectiva. Nos comprometemos a ofrecer una solución que permita una organización meticulosa y una actualización ágil de productos, precios e inventario. Nuestro objetivo es capacitar a los empleados con información precisa en tiempo real Con este SAC, Go Animals Pet Store establecerá nuevos estándares de excelencia en la administración de tiendas de mascotas, garantizando el éxito continuo y la satisfacción del cliente.
+	La misión del Sistema Administrativo (SAC) para Go Animals Pet Store es proporcionar una
+	herramienta integral que revolucione la gestión de productos e inventario,
+	asegurando una operación comercial eficiente y efectiva.
+
+	Nos comprometemos a ofrecer una solución que permita una organización meticulosa y una
+	actualización ágil de productos, precios e inventario.
+
+	Nuestro objetivo es capacitar a los empleados con información precisa en tiempo real
+	con este SAC, Go Animals Pet Store establecerá nuevos estándares de excelencia en la
+	administración de tiendas de mascotas, garantizando el éxito continuo y la satisfacción
+	del cliente.
 
 
 ### DESCRIPCIÓN GENERAL
 
-	El proyecto para Go Animals Pet Store tiene como meta la creación de un sistema administrativo (SAC) diseñado a medida para la mejoración de la eficiencia operativa y la gestión de productos e inventario. Este sistema permitirá una organización meticulosa de los productos e inventario. Este sistema permitirá mostrar de forma detallada los productos, ofreciendo una plataforma donde se podrán registrar y categorizar con información detallada, facilitando así su búsqueda y actualización. Además, el SAC proporcionará un acceso sencillo a la gestión de precios, permitiendo actualizaciones ágiles en respuesta a las fluctuaciones del mercado o necesidades empresariales. 
+	El proyecto para Go Animals Pet Store tiene como meta la creación de un sistema
+	administrativo (SAC) diseñado a medida para la mejoración de la eficiencia operativa y
+	la gestión de productos e inventario. Este sistema permitirá una organización
+	meticulosa de los productos e inventario. Este sistema permitirá mostrar de forma
+	detallada los productos, ofreciendo una plataforma donde se podrán registrar y
+	categorizar con información detallada, facilitando así su búsqueda y actualización.
+	Además, el SAC proporcionará un acceso sencillo a la gestión de precios, permitiendo
+	actualizaciones ágiles en respuesta a las fluctuaciones del mercado o necesidades
+	empresariales.
 
-	Un aspecto crucial será el control de inventario, con un registro actualizado que refleje la disponibilidad de productos, lo que permitirá a los empleados verificar el stock en tiempo real. Por último, el sistema generará informes detallados sobre el estado del inventario y los precios, en conclusión este SAC está destinado a ser una herramienta importante para Go Animals.
+	Un aspecto crucial será el control de inventario, con un registro actualizado que
+	refleje la disponibilidad de productos, lo que permitirá a los empleados verificar
+	el stock en tiempo real. Por último, el sistema generará informes detallados sobre
+	el estado del inventario y los precios, en conclusión este SAC está destinado a ser
+	una herramienta importante para Go Animals.
 
 
 ### FUNCIONES DEL PRODUCTO 
@@ -66,7 +95,13 @@ Donde se presentan las siguientes Necesidades que ellas No Presentación
 
 ***Expecificar cuales son ROLES***
 
-	El Sistema Administrativo para Go Animals Pet Store está diseñado para satisfacer las necesidades de usuario específicos como el nivel de experiencia dentro del contexto de una tienda de mascotas. Al considerar características como el nivel de experiencia, habilidades tecnológicas, preferencias y contexto laboral, el SAC se adapta para ofrecer una experiencia de usuario óptima. Esto asegura que los usuarios puedan gestionar eficientemente el inventario, actualizar precios, y analizar datos relevantes, optimizados así la administración de la tienda y mejorando la experiencia de la compra. 
+	El Sistema Administrativo para Go Animals Pet Store está diseñado para satisfacer las
+	necesidades de usuario específicos como el nivel de experiencia dentro del contexto de
+	una tienda de mascotas. Al considerar características como el nivel de experiencia,
+	habilidades tecnológicas, preferencias y contexto laboral, el SAC se adapta para ofrecer una
+	experiencia de usuario óptima. Esto asegura que los usuarios puedan gestionar eficientemente
+	el inventario, actualizar precios, y analizar datos relevantes, optimizados así la
+	administración de la tienda y mejorando la experiencia de la compra. 
 
 
 #  Sistema
