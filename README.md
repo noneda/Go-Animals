@@ -108,6 +108,27 @@ Donde se presentan las siguientes Necesidades que ellas No Presentación
 
 ## Como se va a implementar
 
+Tener en cuenta que este sistemas se va a implementar en una laptop
+
+	Sistema Operativo : Windows 10 Home
+	Componentes ->
+		Intel core i3 7th
+		6 gb ram 2400Mhz
+		HDD de 250 gb
+
+Poseyendo las Características Físicas del Equipo se llega a la Conclusion que el Software sera en un Sistema LOCAL
+
+Donde se va a implementar Frameworks y Librerías
+
+	Lenguaje de Programación : JavaScript
+	Lenguaje de Base de Datos : SQLite
+
+	Y se va a usar los Siguientes FrameWorks y Librerias (Por el Momento solo he Pensado es estas "Se puede Modificar")
+		Express
+			Sequelize
+		React
+			Boostrap
+
 	Arquitectura  : Modular -> 
 		Para dividir las apps por Modulos independientes y bien definidos asi podiendo obtener numerosos beneficios
 			Mantenimiento Simplificado
