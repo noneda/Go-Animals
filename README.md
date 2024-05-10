@@ -1,9 +1,6 @@
 # Empresa 
 
-
-Falta Que lenguaje de programación se va a Implementar  -> Entorno en el que se va a desarrollar -> Para que sistema Operativo va a ser Desarrollado (Opciones "Servidor Local" -> Falta Aclarar) y en que se va a Manejar las Bases de Datos (Por temas de Costos) Ubicación Frameworks y Librerías explica que es un Modelo Iterativo
-
-Metodologia RUP
+Tener en cuenta que esta App se va Aplicar por medio de la Metodologia RUP
 
 Esta empresa se basa a la **Venta de Comida de Animales Domésticos** donde el representante es
 
