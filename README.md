@@ -161,7 +161,7 @@ Donde se presentan las siguientes Necesidades que ellas No Presentación
 
 ### Diagrama Entidad Relación
 
-![[./medias/DER.png]]
+![[medias/DER.png]]
 
 ### Diagrama de Clases
 
