@@ -11,6 +11,17 @@ Ubicado en
 
 *Soacha - Cll 46 # 11-11* en el Barrio *León XIII*
 
+## Misión
+
+	Animals go brinda a nuestros clientes y sus mascotas un lugar donde puedan encontrar
+	productos de alta calidad y un ambiente amigable que promueva el bienestar animal
+
+## Visión
+
+	Convertirnos en el referente principal en la comunidad para los amantes de las mascotas,
+	siendo reconocidos por nuestra excelencia en productos, servicios y compromiso con el cuidado y la felicidad de los animales
+
+
 Donde se contacta con ella por medio de *WhatsApp* para llegar a la conclusión de la necesidades que ella exige para la creación del Proyecto
 
 Donde se presentan las siguientes Necesidades que ellas No Presentación  
