@@ -139,6 +139,8 @@ Donde se presentan las siguientes Necesidades que ellas No Presentación
 		- Se espera que tenga un nivel de experiencia adecuado en la administración de tiendas, así como habilidades tecnológicas básicas para utilizar el SAC de manera efectiva.
 		- Busca mejorar la experiencia de compra de los clientes y optimizar la administración de la tienda mediante el uso del SAC.#  Sistema
 
+
+#  Sistema
 ## Como se va a implementar
 
 Tener en cuenta que este sistemas se va a implementar en una laptop
