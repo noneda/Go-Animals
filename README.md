@@ -223,4 +223,7 @@ Y con Base a lo Anterior va usar las siguientes
 
 ### Diagrama de Clases
 
-***No existe un Unico Formato -> :P ***
+
+#### BACKEND
+##### Modelos
+![Alt Text](Diagramas/CLSMODELS.png)
