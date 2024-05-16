@@ -38,7 +38,8 @@ Se presentan las siguientes Necesidades
 	1.	Ofrecer una amplia variedad de productos de alta calidad para mascotas, incluyendo 
 	alimentos Premium, golosinas, accesorios y productos para el cuidado.
 	
-	2.	 Proporcionar un servicio al cliente excepcional, brindando asesoramiento sobre la alimentación, el cuidado y el bienestar de las mascotas.
+	2.	 Proporcionar un servicio al cliente excepcional, brindando asesoramiento sobre la 
+	alimentación, el cuidado y el bienestar de las mascotas.
 	
 	3.	Implementar un sistema de gestión de precios que permita monitorear y ajustar 
 	dinámicamente los precios de los productos, asegurando competitividad en el mercado 
@@ -86,7 +87,8 @@ Se presentan las siguientes Necesidades
 	modificaciones. Asimismo, debe ser independiente de la fluctuación de proveedores, 
 	asegurando su funcionamiento sin depender exclusivamente de un proveedor en particular. 
 	Además, el software debe ser capaz de ajustarse dinámicamente en respuesta a cambios 
-	estacionales o tendencias a largo plazo, sin depender exclusivamente de las condiciones temporales del mercado.
+	estacionales o tendencias a largo plazo, sin depender exclusivamente de las condiciones 
+	temporales del mercado.
 
 ## Introducción
 
@@ -208,7 +210,8 @@ Se presentan las siguientes Necesidades
 	1. Administrador (Usuario):
 		- Responsable de la gestión general de la tienda de mascotas.
 		- Tiene acceso completo al Sistema Administrativo para Go Animals Pet Store.
-		- Puede gestionar eficientemente el inventario, actualizar precios y analizar datos relevantes.
+		- Puede gestionar eficientemente el inventario, actualizar precios y analizar 
+		datos relevantes.
 		- Se espera que tenga un nivel de experiencia adecuado en la administración
 		 de tiendas, así como habilidades tecnológicas básicas para utilizar el SAC 
 		 de manera efectiva.
