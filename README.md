@@ -414,6 +414,8 @@ This was created to Manage the Allocation of Product lots
 | UNITIS          | Integer   | How many units are there?                                         |
 | WORTH           | Double    | Value at which it was purchased                                   |
 | MARGIN OF GAIN  | Float     | The profit margin that will be given                              |
+
+
 ***INVENTORY***
 
 We create this table for.. (IDK)
