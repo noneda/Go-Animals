@@ -368,6 +368,7 @@ It was created for the Administration of **Food** Type Products
 | FOR      | Integer   | For Table Reference                         |
 | WEIGHT   | Integer   | Product Quantity                            |
 | EXTENT   | String    | Product Quantity Type                       |
+
 ***HYGIENE***
 
 It was created for the Administration of **Hygiene** Type Products
