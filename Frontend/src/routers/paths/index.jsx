@@ -1,31 +1,30 @@
 // * Pages
+import Home from '../../pages/Home';
+import Notify from '../../pages/Notify';
 
 //* Layouts
+import Layout from '../../layouts';
+
 
 // * Components
+import NotFound from '../../components/Not Found';
+
+
 
 const paths = [
-/*{
-path: "/",
-element : <Login/>,
-errorElement : <Error/>,
-},
-{
-path : "/home",
-element : <Layout/>,
-errorElement : <Error/>,
-children : [
-{
-index : true,
-element : <Home/>
-},
-{
-path: "perfil",
-element : <Perfil/>
-}
-]
+    {
+        path : "/",
+        element : <Layout/>,
+        errorElement : <NotFound/>,
+        children : [
+            {
+                index : true,
+                element : <Home/>
+            },
+        ]
 
-}*/
+    }
+    
 ];
 
 export default paths;
