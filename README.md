@@ -2,6 +2,8 @@
 
 Tener en cuenta que esta App se va Aplicar por medio de la Metodologia RUP
 
+![Alt Text](Diagramas/GoAnimals.jpg)
+
 Esta empresa se basa a la **Venta de Comida de Animales Domésticos** donde el representante es
 
 *Kellin Alejandra Guerrero Leiva*
@@ -429,6 +431,10 @@ We create this table for.. (IDK)
 | BATCH           | String    | Batch Table Reference                                             |
 | TOTAL UNITS     | Integer   | Units currently available                                         |
 | PRICE           | Integer   | Retail Price                                                      |
+
+### Diagrama de Casos de Uso
+
+![Alt Text](Diagramas/UCD.png)
 
 
 ### Diagrama de Clases
