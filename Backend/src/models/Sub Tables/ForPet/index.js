@@ -1,20 +1,23 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../../database');
 
-const Kind = sequelize.define('Kind', {
+const ForPet = sequelize.define('ForPet', {
     ID: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
-    KIND: {
+    GENDER: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    OTHER: {
+        type: DataTypes.STRING
     }
 }, {
-    tableName: 'KIND',
+    tableName: 'FOR_PET',
     timestamps: false
 });
 
-module.exports = Kind;
+module.exports = ForPet;
