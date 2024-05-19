@@ -8,6 +8,7 @@ import Layout from '../../layouts';
 
 // * Components
 import NotFound from '../../components/Not Found';
+import Prueba from '../../pages/Test';
 
 
 
@@ -19,10 +20,13 @@ const paths = [
         children : [
             {
                 index : true,
-                element : <Home/>
+                element : <><Home/> <Notify/></>
             },
         ]
-
+    },
+    {
+        path : "/test",
+        element : <Prueba/>
     }
     
 ];

@@ -15,8 +15,8 @@ html, body {
 body {
   font-family: 'DM Sans', sans-serif;
   overflow: hidden;
-  display:grid;
-  justify-content:space-around;
+  display:flex;
+  justify-content:center;
   background-color: var(--app-container);
 }
 
@@ -27,7 +27,7 @@ button, a {
 .app {
   &-container {
     width: 100%;
-    
+    display:contents;
     flex-direction: column;
     height: 100%;
     background-color: var(--app-container);
@@ -52,7 +52,7 @@ button, a {
     align-items: center;
     width: 100%;
     padding: 16px 24px;
-    position:relative;
+    position: relative;
     
     &-left, &-right {
       display: flex;
