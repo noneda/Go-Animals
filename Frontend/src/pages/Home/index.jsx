@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import RealTimeClock from '../../components/Real Time'; // Asegúrate de que el nombre del componente y la ruta sean correctos
 import Box from '../../components/Box';
+import { boxItems } from '../../API/Items';
+
 
 import {statusItems} from '../../API/Items';
 
@@ -98,9 +100,9 @@ const Home = () => {
         </div>
       </div>
       <div ref={projectsListRef} className="project-boxes jsGridView">
-        <div className="project-box-wrapper">
-          <Box/>
-        </div>
+        {boxItems.get.map((item, index) => (
+            <Box key={index} item={item} />
+          ))}
       </div>
     </div>
   );
