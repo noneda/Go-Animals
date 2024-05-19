@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import RealTimeClock from '../../components/Real Time'
+import RealTimeClock from '../../components/Real Time'; // Asegúrate de que el nombre del componente y la ruta sean correctos
+import Box from '../../components/Box';
 
+import {statusItems} from '../../API/Items';
 
 const Home = () => {
   const listViewRef = useRef(null);
@@ -38,30 +40,22 @@ const Home = () => {
   return (
     <div className="projects-section">
       <div className="projects-section-header">
-        <p>Pet Store</p>
-        <p className="time"><RealTimeClock/></p>
+        <p>Productos</p>
+        <p className='time'><RealTimeClock /> </p>
       </div>
       <div className="projects-section-line">
-        <div className="projects-status">
-          <div className="item-status">
-            <span className="status-number">45</span>
-            <span className="status-type">Comida</span>
-          </div>
-          <div className="item-status">
-            <span className="status-number">24</span>
-            <span className="status-type">Higiene</span>
-          </div>
-          <div className="item-status">
-            <span className="status-number">62</span>
-            <span className="status-type">Ropa</span>
-          </div>
+      <div className="projects-status">
+
+      {statusItems.sorted.map((item, index) => (
+            <div className="item-status" key={index}>
+              <span className="status-number">{item.number}</span>
+              <span className="status-type">{item.type}</span>
+            </div>
+          ))}
+
         </div>
         <div className="view-actions">
-          <button
-            className="view-btn list-view"
-            title="List View"
-            ref={listViewRef}
-          >
+          <button ref={listViewRef} className="view-btn list-view" title="List View">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -82,15 +76,11 @@ const Home = () => {
               <line x1="3" y1="18" x2="3.01" y2="18" />
             </svg>
           </button>
-          <button
-            className="view-btn grid-view active"
-            title="Grid View"
-            ref={gridViewRef}
-          >
+          <button ref={gridViewRef} className="view-btn grid-view active" title="Grid View">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="24"
+              height="24"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -107,71 +97,9 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="project-boxes jsGridView" ref={projectsListRef}>
+      <div ref={projectsListRef} className="project-boxes jsGridView">
         <div className="project-box-wrapper">
-
-          <div className="project-box" style={{ backgroundColor: "#fee4cb" }}>
-            <div className="project-box-header">
-              <span>Producto</span>
-              <div className="more-wrapper">
-                <button className="project-btn-more">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="feather feather-more-vertical"
-                  >
-                    <circle cx="12" cy="12" r="1" />
-                    <circle cx="12" cy="5" r="1" />
-                    <circle cx="12" cy="19" r="1" />
-                  </svg>
-                </button>
-              </div>
-            </div>
-            <div className="project-box-content-header">
-              <p className="box-content-header">Nombre del Producto</p>
-              <p className="box-content-subheader">Tipo de Animal</p>
-            </div>
-            <div className="box-progress-wrapper">
-              <p className="box-progress-header">Canitdad</p>
-              <div className="box-progress-bar">
-                <span
-                  className="box-progress"
-                  style={{ width: "20%", backgroundColor: "#ff942e" }}
-                ></span>
-              </div>
-              <p className="box-progress-percentage">5 Unidades</p>
-            </div>
-            <div className="project-box-footer">
-              <div className="participants">
-                <button className="add-participant" style={{ color: "#ff942e" }}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="feather feather-plus"
-                  >
-                    <path d="M12 5v14M5 12h14" />
-                  </svg>
-                </button>
-              </div>
-              <div className="days-left" style={{ color: "#ff942e" }}>
-                Lote
-              </div>
-            </div>
-          </div>
+          <Box/>
         </div>
       </div>
     </div>

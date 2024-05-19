@@ -15,10 +15,7 @@ const Layout = () => {
             <Header/>
             <div className="app-content">
                 <Sidebar/>
-                <main className="Main">
-                    {isLoading && <Overlay/>}
-                    <Outlet/>
-                </main>
+                    {isLoading ? <Overlay/> : <Outlet/>}
             </div>
         </div>
     );

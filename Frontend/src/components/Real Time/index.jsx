@@ -45,7 +45,9 @@ const RealTimeClock = () => {
   }, []);
 
   return (
-      dateTime.date + ' ' +dateTime.time
+    <>
+    {dateTime.time} <br/> {dateTime.date}  
+    </>
   );
 };
 
