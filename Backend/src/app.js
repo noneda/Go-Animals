@@ -15,12 +15,12 @@ app.get("/", (req, res) => {
   res.json({
     name: "APP Go Animals",
     author: "noneda",
-    version: "0.0.1",
+    version: "0.0.4",
     description: "IDK",
   });
 });
 
 
-routes(app);
+//routes(app);
 
 module.exports = app;

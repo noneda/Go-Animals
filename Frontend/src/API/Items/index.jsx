@@ -13,7 +13,6 @@ export const statusItems = {
     },
 };
 
-
 export  const boxItems = {
     get : [
         {
@@ -83,6 +82,6 @@ export  const boxItems = {
             Type : "Gato"
         },
     ]
-  };
+};
   
 
