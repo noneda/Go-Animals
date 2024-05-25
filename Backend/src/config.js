@@ -1,10 +1,11 @@
 require("dotenv").config();
 
 const prodConfig = {
+  KEY: process.env.KEY,
   SECRET: process.env.SECRET,
+  MAC : process.env.MAC,
   conection: {
     PORT: process.env.PORT,
-    MONGODB_URI: process.env.MONGODB_URI,
   },
   conectionMysql: {
     MYSQL_DATABASE: process.env.MYSQL_DATABASE,
@@ -16,10 +17,11 @@ const prodConfig = {
 };
 
 const devConfig = {
+  KEY: process.env.KEY,
   SECRET: process.env.SECRET,
+  MAC : process.env.MAC,
   conection: {
     PORT: process.env.PORT,
-    MONGODB_URI: process.env.MONGODB_URI,
   },
   conectionMysql: {
     MYSQL_DATABASE: process.env.MYSQL_DATABASE,
