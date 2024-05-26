@@ -1,9 +1,9 @@
 export const statusItems = {
     get: [
-        { number: 12, type: ' Comida  ' },
-        { number: 21, type: ' Higiene  ' },
-        { number: 13, type: ' Ropa  ' },
-        { number: 46, type: ' Total ' },
+        { number: 3, type: ' Comida  ' },
+        { number: 2, type: ' Higiene  ' },
+        { number: 1, type: ' Ropa  ' },
+        { number: 6, type: ' Total ' },
     ],
     sortDesc() {
         return this.get.slice().sort((a, b) => b.number - a.number);
@@ -13,40 +13,75 @@ export const statusItems = {
     },
 };
 
-
-export const boxItems = {
+export  const boxItems = {
     get : [
         {
-            backgroundFondo : '#282a36',
+            backgroundFondo :  "#E9F7EF",
             backgroundProgr : '#48C9B0',
             Product : "Dog chow",
-            Section : "Comida",
-            Units : 15,
-            Quantitylot : 33,
+            Section : "Purina",
+            Units : 5,
+            UnitsL :12,
+            get Quantitylot() {return (this.Units /this.UnitsL) * 100} ,
             Lote : 1,
-            Type : "Purina"
-        }
-        ,
-        {
-            backgroundFondo : '#282a36',
-            backgroundProgr : '#48C9B0',
-            Product : "Dog chow",
-            Section : "Comida",
-            Units : 15,
-            Quantitylot : 33,
-            Lote : 2,
-            Type : "Galletas"
+            Type : "Perro"
         },
         {
-            backgroundFondo : '#282a36',
+            backgroundFondo :  "#E9F7EF",
             backgroundProgr : '#48C9B0',
             Product : "Dog chow",
-            Section : "Comida",
-            Units : 15,
-            Quantitylot : 33,
+            Section : "Purina",
+            Units : 5,
+            UnitsL :12,
+            get Quantitylot() {return (this.Units /this.UnitsL) * 100} ,
             Lote : 1,
-            Type : "Purina"
-        }
+            Type : "Perro"
+        },
+        {
+            backgroundFondo :  "#D4E6F1",
+            backgroundProgr : '#5DADE2',
+            Product : "IKIPETS SHAMPOO",
+            Section : "Higiene",
+            Units : 15,
+            UnitsL : 20,
+            get Quantitylot() {return (this.Units /this.UnitsL) * 100} ,
+            Lote : 1,
+            Type : "Gato"
+        },
+        {
+            backgroundFondo :  "#FEF9E7",
+            backgroundProgr : '#48C9B0',
+            Product : "Pillama",
+            Section : "Gato",
+            Units : 1,
+            UnitsL : 3,
+            get Quantitylot() {return (this.Units /this.UnitsL) * 100} ,
+            Lote : 1,
+            Type : "Ropa"
+        },
+        {
+            backgroundFondo :  "#E9F7EF",
+            backgroundProgr : '#48C9B0',
+            Product : "Dog chow",
+            Section : "Purina",
+            Units : 5,
+            UnitsL :12,
+            get Quantitylot() {return (this.Units /this.UnitsL) * 100} ,
+            Lote : 1,
+            Type : "Perro"
+        },
+        {
+            backgroundFondo :  "#D4E6F1",
+            backgroundProgr : '#5DADE2',
+            Product : "IKIPETS SHAMPOO",
+            Section : "Higiene",
+            Units : 15,
+            UnitsL : 20,
+            get Quantitylot() {return (this.Units /this.UnitsL) * 100} ,
+            Lote : 1,
+            Type : "Gato"
+        },
     ]
-}
+};
+  
 

@@ -19,14 +19,22 @@
   },
   "homepage": "https://github.com/noneda/Go-Animals#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
     "dotenv": "^16.4.5",
     "esm": "^3.2.25",
     "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.1.0",
+    "jsonwebtoken": "^9.0.2",
     "mariadb": "^3.3.0",
     "morgan": "^1.10.0",
     "mysql2": "^3.9.3",
+    "ncrypt-js": "^2.1.1",
     "nodemon": "^3.1.0",
+    "redux": "^5.0.1",
     "sequelize": "^6.37.3"
   },
   "devDependencies": {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 
 import { RouterProvider } from 'react-router-dom'
 
-import "./styles/base.scss"
+import "./sass/base.scss"
 
 import Router from './routers'
 

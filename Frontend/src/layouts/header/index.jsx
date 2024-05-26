@@ -1,20 +1,30 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { handlelogout } from '../../API/LogOut';
+import { Navigate } from 'react-router-dom';
 
 const Header = () => {
-  useEffect(() => {
-    const modeSwitch = document.querySelector('.mode-switch');
+    const [isLogOut, setIsLogOut] = useState()
 
-    const handleModeSwitch = () => {
-      document.documentElement.classList.toggle('dark');
-      modeSwitch.classList.toggle('active');
-    };
+    const LogOut = async () => {
+        await handlelogout((success) => {
+            alert("Cerrar Secion")
+            setIsLogOut(success)
+        })
+    }
+    useEffect(() => {
+        const modeSwitch = document.querySelector('.mode-switch');
 
-    modeSwitch.addEventListener('click', handleModeSwitch);
+        const handleModeSwitch = () => {
+        document.documentElement.classList.toggle('dark');
+        modeSwitch.classList.toggle('active');
+        };
 
-    return () => {
-      modeSwitch.removeEventListener('click', handleModeSwitch);
-    };
-  }, []);
+        modeSwitch.addEventListener('click', handleModeSwitch);
+
+        return () => {
+        modeSwitch.removeEventListener('click', handleModeSwitch);
+        };
+    }, []);
 
   return (
   <div className="app-header">
@@ -22,7 +32,7 @@ const Header = () => {
         <span className="app-icon"></span>
         <p className="app-name">Go Animals</p>
         <div className="search-wrapper">
-            <input className="search-input" type="text" placeholder="Search" />
+            <input id="search" className="search-input" type="text" placeholder="Search" />
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="feather feather-search" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="M21 21l-4.35-4.35"></path>
@@ -36,16 +46,18 @@ const Header = () => {
             </svg>
         </button>
         <button className="add-btn" title="Add New Project">
-            <svg className="btn-icon feather feather-plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" >
+            <svg className="btn-icon feather feather-plus"  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" >
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <line x1="5" y1="12" x2="19" y2="12" />
             </svg>
         </button>
-        <button className="notification-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-bell">
-                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
-                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+        <button className="notification-btn" onClick={LogOut}>
+            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14l5-5l-5-5m5 5H9"></path>
             </svg>
+            {
+                isLogOut ? <Navigate to = "/"/> : <></>
+            }
         </button>
     </div>
     <button className="messages-btn">

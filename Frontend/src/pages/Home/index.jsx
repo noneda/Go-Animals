@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import RealTimeClock from '../../components/Real Time'; // Asegúrate de que el nombre del componente y la ruta sean correctos
-import Box from '../../components/Box';
 
-import {statusItems} from '../../API/Items';
+import Box from '../../components/Box';
+import { boxItems, statusItems } from '../../API/Items';
 
 const Home = () => {
   const listViewRef = useRef(null);
@@ -57,7 +57,6 @@ const Home = () => {
         <div className="view-actions">
           <button ref={listViewRef} className="view-btn list-view" title="List View">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -78,7 +77,6 @@ const Home = () => {
           </button>
           <button ref={gridViewRef} className="view-btn grid-view active" title="Grid View">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
@@ -98,9 +96,9 @@ const Home = () => {
         </div>
       </div>
       <div ref={projectsListRef} className="project-boxes jsGridView">
-        <div className="project-box-wrapper">
-          <Box/>
-        </div>
+        {boxItems.get.map((item, index) => (
+            <Box key={index} item={item} />
+          ))}
       </div>
     </div>
   );
