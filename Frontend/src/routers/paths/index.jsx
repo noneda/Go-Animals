@@ -1,5 +1,6 @@
 // * Pages
 import Home from '../../pages/Home';
+import Login from '../../pages/Login';
 import Notify from '../../pages/Notify';
 
 //* Layouts
@@ -7,15 +8,14 @@ import Layout from '../../layouts';
 
 // * Components
 import NotFound from '../../components/Not Found';
-// import Prueba from '../../pages/Test';
-import Overlay from '../../layouts/overlay';
+
 import Private from '../Private';
 
 
 const paths = [
     {
         path : "/",
-        element : <Overlay/>,
+        element : <Login/>,
         errorElement : <NotFound/>
     },
     {

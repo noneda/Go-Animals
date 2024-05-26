@@ -27,6 +27,8 @@ const LogIn = async (req, res) => {
                 message : "Login Failure",
             })
         }
+        console.log(req.session.key)
+
     }catch(err){
         res.status(500).json({
             message : "Failure!",
@@ -60,10 +62,14 @@ const LogOut = async (req, res) => {
 
 
 // * POST
-const Check = async (req, res, next) => {
+const Check = async (req, res) => {
+    const {
+        token
+    } = req.body;
     try{
-        if (req.session.key) {
-            return next();
+        if (req.session.key === token) {
+            res.status(200)
+
           } else {
             res.status(400).json({
                 message : "Please login first"

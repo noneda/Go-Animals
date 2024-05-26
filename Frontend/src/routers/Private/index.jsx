@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 
 const Private = ({ children }) => {
-  const isAuthenticated = localStorage.getItem('token') !== null;
+  const isAuthenticated = sessionStorage.getItem('token') !== null;
   
   if (!isAuthenticated) {
     return <Navigate to="/" />;

@@ -1,20 +1,30 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { handlelogout } from '../../API/LogOut';
+import { Navigate } from 'react-router-dom';
 
 const Header = () => {
-  useEffect(() => {
-    const modeSwitch = document.querySelector('.mode-switch');
+    const [isLogOut, setIsLogOut] = useState()
 
-    const handleModeSwitch = () => {
-      document.documentElement.classList.toggle('dark');
-      modeSwitch.classList.toggle('active');
-    };
+    const LogOut = async () => {
+        await handlelogout((success) => {
+            alert("Cerrar Secion")
+            setIsLogOut(success)
+        })
+    }
+    useEffect(() => {
+        const modeSwitch = document.querySelector('.mode-switch');
 
-    modeSwitch.addEventListener('click', handleModeSwitch);
+        const handleModeSwitch = () => {
+        document.documentElement.classList.toggle('dark');
+        modeSwitch.classList.toggle('active');
+        };
 
-    return () => {
-      modeSwitch.removeEventListener('click', handleModeSwitch);
-    };
-  }, []);
+        modeSwitch.addEventListener('click', handleModeSwitch);
+
+        return () => {
+        modeSwitch.removeEventListener('click', handleModeSwitch);
+        };
+    }, []);
 
   return (
   <div className="app-header">
@@ -41,10 +51,13 @@ const Header = () => {
                 <line x1="5" y1="12" x2="19" y2="12" />
             </svg>
         </button>
-        <button className="notification-btn">
+        <button className="notification-btn" onClick={LogOut}>
             <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
                 <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14l5-5l-5-5m5 5H9"></path>
             </svg>
+            {
+                isLogOut ? <Navigate to = "/"/> : <></>
+            }
         </button>
     </div>
     <button className="messages-btn">

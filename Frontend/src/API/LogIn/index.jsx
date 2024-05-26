@@ -1,5 +1,5 @@
-import axios from "axios"
-import { MAC, Encrypt, Decrypt } from "../../Utils/Secure"
+import axios from "../config"
+import {Encrypt} from "../../Utils/Secure"
 
 const send = {
     MAC: "D0:3C:1F:08:79:9C"
@@ -7,18 +7,15 @@ const send = {
 
 export const handleLogin = async (onSuccess) => {
     try{
-        console.log("Error Aqui")
         const get = Encrypt(send)
-        console.log(get)
-        
-        const res = await axios.post('http://localhost:1200/API/Auth/LogIn', {
+        const res = await axios.post('/Auth/LogIn', {
             get
         })
         if(res.status === 200){
             const { token } = res.data.set
-            localStorage.setItem('token', token)
+            sessionStorage.setItem('token', token)
             onSuccess(true)
-        }else{
+        }else{ 
             onSuccess(false)
         }
 
