@@ -5,17 +5,22 @@ import Notify from '../../pages/Notify';
 //* Layouts
 import Layout from '../../layouts';
 
-
 // * Components
 import NotFound from '../../components/Not Found';
-import Prueba from '../../pages/Test';
-
+// import Prueba from '../../pages/Test';
+import Overlay from '../../layouts/overlay';
+import Private from '../Private';
 
 
 const paths = [
     {
         path : "/",
-        element : <Layout/>,
+        element : <Overlay/>,
+        errorElement : <NotFound/>
+    },
+    {
+        path : "/home",
+        element : <Private><Layout/></Private>,
         errorElement : <NotFound/>,
         children : [
             {
@@ -23,12 +28,43 @@ const paths = [
                 element : <><Home/> <Notify/></>
             },
         ]
-    },
-    {
-        path : "/test",
-        element : <Prueba/>
-    }
-    
+    }    
 ];
 
 export default paths;
+/*
+const routes = [
+    {
+      path: "/login", 
+      element: <Login />,
+      errorElement: <NotFound />,
+    },
+    {
+      path: "/",
+      element: <Overlay />,
+    },
+    {
+      path: "/test",
+      element: <Home />,
+    },
+    {
+      path: "/home",
+      element: <PrivateRoute><Layout /></PrivateRoute>,
+      errorElement: <NotFound />,
+      children: [
+        {
+          index: true,  
+          element: <Home />,
+        },
+        {
+          path: "cal",
+          element: <Calendar />,
+        },
+        {
+          path: "fac",
+          element: <Factura />,
+        },
+      ],
+    },
+  ];
+  */

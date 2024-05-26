@@ -1,26 +1,29 @@
-const { ncrypt } = require('ncrypt-js')
+const CryptoJS = require("crypto-js");
 
 const {getConfig} = require('../../config');
 const conf = getConfig()
 
-let Key = new ncrypt(conf.conection.PORT ? conf.KEY :`~IxAC/k]B_1d&g+`) 
-let Value = new ncrypt(conf.conection.PORT ? conf.SECRET :`x6X9;C'-<0N<YN9`)
+let Key = conf.conection.PORT ? conf.KEY :`~IxAC/k]B_1d&g+` 
+let Value = conf.conection.PORT ? conf.SECRET :`x6X9;C'-<0N<YN9`
 
 const Encrypt = (item) => {
+    const iv = CryptoJS.lib.WordArray.random(16);
+
     return JSON.parse(JSON.stringify(
         Object.fromEntries(
             Object.entries(item).map(
-                ([key, value]) => [Key.encrypt(key), Value.encrypt(value)]
+                ([key, value]) => [CryptoJS.AES.encrypt(key, Key, {iv}).toString(), CryptoJS.AES.encrypt(value, Value, {iv}).toString()]
             )
         )
     ));
 }
 
+
 const Decrypt = (item) => {
     return JSON.parse(JSON.stringify(
         Object.fromEntries(
             Object.entries(item).map(
-                ([key, value]) => [Key.decrypt(key), Value.decrypt(value)]
+                ([key, value]) => [CryptoJS.AES.decrypt(key, Key).toString(CryptoJS.enc.Utf8), CryptoJS.AES.decrypt(value, Value).toString(CryptoJS.enc.Utf8)]
             )
         )
     ));

@@ -9,7 +9,10 @@ const app = express();
 
 app.use(express.json({ limit: "10mb" }));
 app.use(morgan("tiny"));
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:5173',  // Ajusta al puerto del frontend
+  credentials: true
+}));
 
 app.use(session({
   secret: 'tu_clave_secreta', 
@@ -31,6 +34,6 @@ app.get("/", (req, res) => {
 });
 
 
-//routes(app);
+routes(app);
 
 module.exports = app;

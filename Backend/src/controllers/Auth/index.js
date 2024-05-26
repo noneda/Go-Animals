@@ -1,4 +1,4 @@
-const {Decrypt, Token} = require('../../utils/Secure') 
+const {Decrypt, Encrypt, Token} = require('../../utils/Secure') 
 
 const {getConfig} = require('../../config');
 const conf = getConfig()
@@ -8,9 +8,11 @@ const LogIn = async (req, res) => {
     const {
         get
     }  = req.body;
+
+    console.log(get)
     try{
         const decrypt = Decrypt(get)
-
+        console.log(decrypt)
         if(decrypt.MAC === conf.MAC){
             const token = await Token()
             req.session.key =  token
@@ -37,6 +39,7 @@ const LogIn = async (req, res) => {
 
 const LogOut = async (req, res) => {
     try{
+        console.log(req.session.key)
        await req.session.destroy(err => {
             if(err){
                 res.status(400).json({
