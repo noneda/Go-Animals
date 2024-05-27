@@ -13,7 +13,7 @@ const Prueba = () => {
                             <circle cx="11" cy="11" r="8"></circle>
                             <path d="M21 21l-4.35-4.35"></path>
                         </svg>
-                    </div>
+                    </div>s
                 </div>
                 <div className="app-header-right">
                     <button className="mode-switch" title="Switch Theme">

@@ -1,35 +1,68 @@
 import { useState } from "react";
 
-const EditBox = (info, {closeModal}) => {
-    const handleSave = () => {
-        closeModal()
-    }
-
-    return(
-<>
-<div className="overlay"></div>
-      <div className="modal">
-        <h2>Editar Datos</h2>
-        <label htmlFor="units">Units:</label>
-        <input
-          type="number"
-          id="units"
-          value={units}
-          onChange={(e) => setUnits(e.target.value)}
-        />
-        <br />
-        <label htmlFor="unitsL">UnitsL:</label>
-        <input
-          type="number"
-          id="unitsL"
-          value={unitsL}
-          onChange={(e) => setUnitsL(e.target.value)}
-        />+
-        <br />
-        <button onClick={handleSave}>Guardar</button>
+const ActionsBox = (props) => {
+  return(props.trigger)  ? (
+<div className="ActionsBox">
+<div className="container">
+  <div className="card cart">
+    <label className="title">Producto</label>
+    <div className="steps">
+      <div className="step">
+        <div className="promo">
+          <form className="form">
+          <div className="inputGroup">
+            <div className="One">
+              <input 
+                type="text" 
+                required 
+                autoComplete="off"
+                />
+              <label htmlFor="name">Nombre</label>
+            </div>
+            <div className="Two">
+            <div className="One">
+              <input 
+                type="text" 
+                required 
+                autoComplete="off"
+                />
+              <label htmlFor="name">Seción</label>
+            </div>
+            <div className="One">
+              <input 
+                type="text" 
+                required 
+                autoComplete="off"
+                />
+              <label htmlFor="name">Typo</label>
+            </div>
+            </div>
+            <div className="One">
+              <input 
+                type="text" 
+                required 
+                autoComplete="off"
+                />
+              <label htmlFor="name">Lote</label>
+            </div>
+          </div>
+          </form>
+        </div>
+        <hr/>
       </div>
-</>
-    ); 
-}
+    </div>
+  </div>
 
-export default EditBox;
+  <div className="card checkout">
+    <div className="footer">
+      <label className="price"></label>
+      <button className="my-button">
+       Guardar
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+) : null;
+}
+export default ActionsBox;

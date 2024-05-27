@@ -18,12 +18,13 @@ const Layout = () => {
             await Check((success) => {
                 setIsAuth(success);
             });
-        },10 * 60 * 1000); 
+        console.log("Hello Word!")
+        },1  * 60 * 1000); 
         return () => clearInterval(interval);
     }, []);
 
     if (isAuth){
-        alert("Seccion Expirada")
+        alert("Seccion Expirada");
         return <Navigate to="/" />
     }
 

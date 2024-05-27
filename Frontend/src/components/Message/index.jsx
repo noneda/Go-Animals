@@ -3,7 +3,7 @@ const Message = () => {
 <div className="message-box">
     <div className="message-content">
         <div className="message-header">
-            <div className="name">Aybüke C.</div>
+            <div className="name">Estan en Produccion</div>
             <div className="star-checkbox">
                 <input type="checkbox" id="star-1" />
                 <label htmlFor="star-1">
@@ -13,8 +13,8 @@ const Message = () => {
                 </label>
             </div>
         </div>
-        <p className="message-line">Hey Alex! We need the final design for our client meeting.</p>
-        <p className="message-line time">Dec, 12</p>
+        <p className="message-line">No Disponible</p>
+        <p className="message-line time">:P</p>
     </div>
 </div>
     )
