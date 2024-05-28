@@ -2,13 +2,18 @@ import { useEffect, useState } from 'react';
 import { handlelogout } from '../../API/LogOut';
 import { Navigate } from 'react-router-dom';
 
+import PupUp from '../../components/PopUp';
+
 const Header = () => {
     const [isLogOut, setIsLogOut] = useState()
+    const [isShow, setIsShow] = useState(false)
 
     const LogOut = async () => {
         await handlelogout((success) => {
-            alert("Cerrar Secion")
-            setIsLogOut(success)
+            if(success){
+                setIsLogOut(success);
+                setIsShow(true)
+            }
         })
     }
     useEffect(() => {
@@ -26,7 +31,11 @@ const Header = () => {
         };
     }, []);
 
+    if (!isShow && isLogOut) {
+        return <Navigate to="/" />;
+    }
   return (
+    <>
   <div className="app-header">
     <div className="app-header-left">
         <span className="app-icon"></span>
@@ -55,9 +64,6 @@ const Header = () => {
             <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
                 <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4m7 14l5-5l-5-5m5 5H9"></path>
             </svg>
-            {
-                isLogOut ? <Navigate to = "/"/> : <></>
-            }
         </button>
     </div>
     <button className="messages-btn">
@@ -66,6 +72,10 @@ const Header = () => {
         </svg>
     </button>
 </div>
+<PupUp trigger={isShow} setTrigger = {setIsShow} >
+    Cerrar Secion
+</PupUp> 
+</>
   );
 };
 

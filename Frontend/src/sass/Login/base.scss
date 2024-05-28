@@ -15,18 +15,18 @@
         border: none;
         font-family: inherit;
         font-weight: 500;
-        color: black;
-        background-color: white;
+        color: var(--main-color);
+        background-color: var(--more-list-bg);
        }
        
        .btn:hover {
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 20px var(--more-list-shadow);
        }
        
        .btn:active {
         transform: translateY(-1px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 5px 10px var(--more-list-shadow);
        }
        
        .btn::after {
@@ -43,7 +43,7 @@
        }
        
        .btn::after {
-        background-color: #fff;
+        background-color: var(--more-list-bg);
        }
        
        .btn:hover::after {

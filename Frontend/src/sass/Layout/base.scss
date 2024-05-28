@@ -1,9 +1,5 @@
-// * This All Layout
-@import '../data/base.scss';
-
 .Overlay{
-    /* Absolute Center Spinner */
-    .loading {
+      .loading {
       position: fixed;
       z-index: 999;
       height: 2em;
@@ -16,7 +12,6 @@
       right: 0;
     }
   
-    /* Transparent Overlay */
     .loading:before {
       content: '';
       display: block;
@@ -27,9 +22,7 @@
       height: 100%;
       }
   
-    /* :not(:required) hides these rules from IE9 and below */
     .loading:not(:required) {
-      /* hide "loading..." text */
       font: 0/0 a;
       color: transparent;
       text-shadow: none;
@@ -54,7 +47,6 @@
       box-shadow: rgba(0, 0, 0, 0.75) 1.5em 0 0 0, rgba(0, 0, 0, 0.75) 1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) 0 1.5em 0 0, rgba(0, 0, 0, 0.75) -1.1em 1.1em 0 0, rgba(0, 0, 0, 0.75) -1.5em 0 0 0, rgba(0, 0, 0, 0.75) -1.1em -1.1em 0 0, rgba(0, 0, 0, 0.75) 0 -1.5em 0 0, rgba(0, 0, 0, 0.75) 1.1em -1.1em 0 0;
     }
   
-    /* Animation */
   
     @-webkit-keyframes spinner {
       0% {

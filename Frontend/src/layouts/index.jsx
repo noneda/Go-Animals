@@ -6,28 +6,32 @@ import Overlay from "./overlay";
 import Sidebar from "./sidebar";
 import Check from "../API/Check";
 
+import PupUp from "../components/PopUp";
+
 const Layout = () => {
     
     const location = useLocation();
     const isLoading = location.state?.loading;
 
-    const [isAuth , setIsAuth] = useState(null)
+    const [isAuth , setIsAuth] = useState(false)
+    const [isShow, setIsShow] = useState(false)
 
     useEffect(() => {
         const interval = setInterval(async () => {
             await Check((success) => {
-                setIsAuth(success);
+                if(success){
+                    setIsAuth(success);
+                    setIsShow(true)
+                }
             });
-        console.log("Hello Word!")
-        },1  * 60 * 1000); 
+        },10  * 60 * 1000); 
         return () => clearInterval(interval);
     }, []);
 
-    if (isAuth){
-        alert("Seccion Expirada");
-        return <Navigate to="/" />
+    //isAuth &&!isShow && <Navigate to="/" />
+    if (!isShow && isAuth) {
+        return <Navigate to="/" />;
     }
-
     return (
         <>
         <div className="app-container">
@@ -37,6 +41,10 @@ const Layout = () => {
                     {isLoading ? <Overlay/> : <Outlet/>}
             </div>
         </div>
+
+        <PupUp trigger={isShow} setTrigger = {setIsShow} >
+             Secion Expirada
+        </PupUp> 
         </>
     );
 };

@@ -18,11 +18,8 @@ export const handleLogin = async (onSuccess) => {
         }else{ 
             onSuccess(false)
         }
-
     }catch(err){
-        alert("Login Failed \n\tThis Software is not for this Device")
         onSuccess(false)
-
     }
 }
 
