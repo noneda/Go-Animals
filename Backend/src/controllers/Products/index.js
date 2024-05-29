@@ -59,11 +59,12 @@ const sendBox = async (req, res) => {
                 return res.status(404).json({ message: 'Food product not found' });
             }
             const oneKind = await modelKind.findByPk(oneFood.FKIND);
-            const oneType = await modelType.findByPk(oneFood.FFOR);
+            const oneType = await modelType.findByPk(oneFood.FTYPE);
 
             backgroundFondo = "#E9F7EF";
             backgroundProgr = '#48C9B0';
             set = {
+                id : inventory.ID,
                 backgroundFondo: backgroundFondo,
                 backgroundProgr: backgroundProgr,
                 Product: oneFood.FNAME,
@@ -81,11 +82,12 @@ const sendBox = async (req, res) => {
                 return res.status(404).json({ message: 'Hygiene product not found' });
             }
             const oneKind = await modelKind.findByPk(oneHygiene.HKIND);
-            const oneType = await modelType.findByPk(oneHygiene.HFOR);
+            const oneType = await modelType.findByPk(oneHygiene.HTYPE);
 
             backgroundFondo = "#D4E6F1";
             backgroundProgr = '#5DADE2';
             set = {
+                id : inventory.ID,
                 backgroundFondo: backgroundFondo,
                 backgroundProgr: backgroundProgr,
                 Product: oneHygiene.HNAME,
@@ -103,11 +105,12 @@ const sendBox = async (req, res) => {
                 return res.status(404).json({ message: 'Clothes product not found' });
             }
             const oneKind = await modelKind.findByPk(oneClothe.CKIND);
-            const oneType = await modelType.findByPk(oneClothe.CFOR);
+            const oneType = await modelType.findByPk(oneClothe.CTYPE);
 
             backgroundFondo = "#FEF9E7";
             backgroundProgr = '#48C9B0';
             set = {
+                id : inventory.ID,
                 backgroundFondo: backgroundFondo,
                 backgroundProgr: backgroundProgr,
                 Product: oneClothe.CNAME,
@@ -122,7 +125,7 @@ const sendBox = async (req, res) => {
         }
 
         res.status(200).json({ set :
-            Encrypt(set)
+            (set)
          });
 
     } catch (err) {
@@ -156,11 +159,12 @@ const sendBoxs = async (req, res) => {
                     throw new Error(`Food product not found for inventory id ${inventory.ID}`);
                 }
                 const oneKind = await modelKind.findByPk(oneFood.FKIND);
-                const oneType = await modelType.findByPk(oneFood.FFOR);
+                const oneType = await modelType.findByPk(oneFood.FTYPE);
 
                 backgroundFondo = "#E9F7EF";
                 backgroundProgr = '#48C9B0';
                 box = {
+                    id : inventory.ID,
                     backgroundFondo: backgroundFondo,
                     backgroundProgr: backgroundProgr,
                     Product: oneFood.FNAME,
@@ -178,11 +182,12 @@ const sendBoxs = async (req, res) => {
                     throw new Error(`Hygiene product not found for inventory id ${inventory.ID}`);
                 }
                 const oneKind = await modelKind.findByPk(oneHygiene.HKIND);
-                const oneType = await modelType.findByPk(oneHygiene.HFOR);
+                const oneType = await modelType.findByPk(oneHygiene.HTYPE);
 
                 backgroundFondo = "#D4E6F1";
                 backgroundProgr = '#5DADE2';
                 box = {
+                    id : inventory.ID,
                     backgroundFondo: backgroundFondo,
                     backgroundProgr: backgroundProgr,
                     Product: oneHygiene.HNAME,
@@ -200,11 +205,12 @@ const sendBoxs = async (req, res) => {
                     throw new Error(`Clothes product not found for inventory id ${inventory.ID}`);
                 }
                 const oneKind = await modelKind.findByPk(oneClothe.CKIND);
-                const oneType = await modelType.findByPk(oneClothe.CFOR);
+                const oneType = await modelType.findByPk(oneClothe.CTYPE);
 
                 backgroundFondo = "#FEF9E7";
                 backgroundProgr = '#48C9B0';
                 box = {
+                    id : inventory.ID,
                     backgroundFondo: backgroundFondo,
                     backgroundProgr: backgroundProgr,
                     Product: oneClothe.CNAME,
