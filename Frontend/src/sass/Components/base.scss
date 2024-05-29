@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
-
 .Notfound{
     .body{ 
       font-size: 96px;
@@ -74,5 +72,111 @@
         transform: translate(-22px,5px) skew(21deg); 
       }
     }
+}
+
+
+.PopUp{
+    background-color: var(--more-list-shadow); 
+    -webkit-backdrop-filter: blur(5px); 
+    backdrop-filter: blur(5px);
+    padding: 20px 30px; 
+    z-index: 9;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0px;
+
   }
   
+  .card {
+    width: 400px;
+    background: var(--message-box-hover);
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+  }
+  
+  .title {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: var(--main-color) ;
+    ;
+    font-weight: 1000;
+    font-size: 32px;
+  }
+  #tile {
+    display:flex;
+    padding: 10px 13px;
+  }
+  .Exit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 65, 65);
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+        width: 17px;
+    }
+      
+    svg path {
+        fill: white;
+    }
+  }
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  &:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  &:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  &:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  &:active {
+    transform: translate(2px ,2px);
+  }
+}
+}

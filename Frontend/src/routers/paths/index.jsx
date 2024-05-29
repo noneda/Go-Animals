@@ -2,6 +2,7 @@
 import Home from '../../pages/Home';
 import Login from '../../pages/Login';
 import Notify from '../../pages/Notify';
+import EditBox from '../../components/Edit';
 
 //* Layouts
 import Layout from '../../layouts';
@@ -28,7 +29,12 @@ const paths = [
                 element : <><Home/> <Notify/></>
             },
         ]
-    }    
+    },
+    {
+      path : "/test",
+      element : <EditBox/>,
+      errorElement : <NotFound/>
+    }
 ];
 
 export default paths;
