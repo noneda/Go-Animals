@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../../database')
+const sequelize = require('../../../database/');
 
 const Batch = sequelize.define('Batch', {
     ID: {
@@ -19,10 +19,6 @@ const Batch = sequelize.define('Batch', {
     },
     PRODUCT: {
         type: DataTypes.INTEGER,
-        references : {
-            model : setEstudianteBalanceEnergia,
-            key : 'id' 
-        }
     },
     KIND_OF_PRODUCT : {
         type : DataTypes.STRING,
@@ -30,7 +26,7 @@ const Batch = sequelize.define('Batch', {
     UNITS : {
         type : DataTypes.INTEGER
     },
-    WORTHS : {
+    WORTH : {
         type : DataTypes.DOUBLE
     },
     MARGIN_OF_GAIN : {

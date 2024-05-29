@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../../database');
+const sequelize = require('../../../database/');
 const Batch = require('../Batch');
 
 const Inventory = sequelize.define('Inventory', {

@@ -1,5 +1,3 @@
-const sequelize = require('sequelize');
-
 const { Sequelize } = require('sequelize');
 require("dotenv").config();
 const { getConfig } =  require('../config')
@@ -16,7 +14,6 @@ const sequelize = new Sequelize(
   }
 );
 
-// Verificar la conexión a la base de datos
 sequelize
   .authenticate()
   .then(() => {

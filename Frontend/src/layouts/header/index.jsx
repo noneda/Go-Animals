@@ -3,11 +3,22 @@ import { handlelogout } from '../../API/LogOut';
 import { Navigate } from 'react-router-dom';
 
 import PupUp from '../../components/PopUp';
+import ActionsBox from '../../components/Edit';
 
 const Header = () => {
     const [isLogOut, setIsLogOut] = useState()
     const [isShow, setIsShow] = useState(false)
+    const [isNew , setIsNew] = useState(false)
 
+    const itemNew = {
+        Product : null,
+        Section : null,
+        Units : null,
+        Lote : null,
+        Type : null,
+        Value : null
+    }
+    
     const LogOut = async () => {
         await handlelogout((success) => {
             if(success){
@@ -16,6 +27,7 @@ const Header = () => {
             }
         })
     }
+    
     useEffect(() => {
         const modeSwitch = document.querySelector('.mode-switch');
 
@@ -54,7 +66,7 @@ const Header = () => {
                 <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
             </svg>
         </button>
-        <button className="add-btn" title="Add New Project">
+        <button className="add-btn" title="Add New Project" onClick={() => setIsNew(true)}>
             <svg className="btn-icon feather feather-plus"  width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" >
                 <line x1="12" y1="5" x2="12" y2="19" />
                 <line x1="5" y1="12" x2="19" y2="12" />
@@ -74,7 +86,10 @@ const Header = () => {
 </div>
 <PupUp trigger={isShow} setTrigger = {setIsShow} >
     Cerrar Secion
-</PupUp> 
+</PupUp>
+<ActionsBox trigger={isNew} setTrigger = {setIsNew} item = {itemNew}>
+    Nuevo Producto
+</ActionsBox>
 </>
   );
 };

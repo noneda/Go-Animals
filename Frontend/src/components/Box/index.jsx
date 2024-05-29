@@ -35,7 +35,7 @@ const Box = ({ item }) => {
         <p className="box-content-subheader">{item.Section}</p>
       </div>
       <div className="box-progress-wrapper">
-        <p className="box-progress-header">Unidades</p>
+        <p className="box-progress-header">{item.Value}</p>
         <div className="box-progress-bar">
           <span className="box-progress" style={{ width: `${item.Quantitylot}%`, backgroundColor: item.backgroundProgr }}></span>
         </div>
@@ -64,8 +64,10 @@ const Box = ({ item }) => {
       </div>
     </div>
   </div>
-  <ActionsBox trigger={isShow} setTrigger = {setIsShow}/>
-  </>
+  <ActionsBox trigger={isShow} setTrigger = {setIsShow} item = {item}>
+    Editar Producto
+  </ActionsBox>
+</>
     );
   };
   

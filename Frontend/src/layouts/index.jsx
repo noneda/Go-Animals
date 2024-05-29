@@ -24,7 +24,7 @@ const Layout = () => {
                     setIsShow(true)
                 }
             });
-        },10  * 60 * 1000); 
+        },1 * 60  * 1000); 
         return () => clearInterval(interval);
     }, []);
 

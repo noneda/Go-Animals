@@ -38,7 +38,7 @@ const Food = sequelize.define('Food', {
         }
     },
     SIZES: {
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
     },
     FFOR: {
         type: DataTypes.INTEGER,

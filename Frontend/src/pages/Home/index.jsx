@@ -1,18 +1,34 @@
-import React, { useEffect, useRef } from 'react';
-import RealTimeClock from '../../components/Real Time'; // Asegúrate de que el nombre del componente y la ruta sean correctos
+import React, { useEffect, useRef, useState } from 'react';
+import RealTimeClock from '../../components/Real Time'; 
 
 import Box from '../../components/Box';
-import { boxItems, statusItems } from '../../API/Items';
+import { boxItems, getBoxItems, getStatus } from '../../API/Items';
 
 const Home = () => {
   const listViewRef = useRef(null);
   const gridViewRef = useRef(null);
   const projectsListRef = useRef(null);
+  const [isStatus, setIsStatus] = useState([])
+  const [isBox, setIsBox] = useState([])
 
   useEffect(() => {
     const listView = listViewRef.current;
     const gridView = gridViewRef.current;
     const projectsList = projectsListRef.current;
+
+    const fetchData = async () => {
+      const data = await getStatus();
+        if (data) {
+          setIsStatus(data)
+        } 
+    };  
+
+    const fetchBoxs = async () => {
+      const data = await getBoxItems();
+        if (data) {
+          setIsBox(data)
+        } 
+    }; 
 
     const handleListViewClick = () => {
       gridView.classList.remove('active');
@@ -31,6 +47,8 @@ const Home = () => {
     listView.addEventListener('click', handleListViewClick);
     gridView.addEventListener('click', handleGridViewClick);
 
+    fetchData();
+    fetchBoxs();
     return () => {
       listView.removeEventListener('click', handleListViewClick);
       gridView.removeEventListener('click', handleGridViewClick);
@@ -46,12 +64,16 @@ const Home = () => {
       <div className="projects-section-line">
       <div className="projects-status">
 
-      {statusItems.sorted.map((item, index) => (
-            <div className="item-status" key={index}>
-              <span className="status-number">{item.number}</span>
-              <span className="status-type">{item.type}</span>
-            </div>
-          ))}
+      {isStatus.length > 0 ? (
+            isStatus.map((item, index) => (
+              <div className="item-status" key={index}>
+                <span className="status-number">{item.number}</span>
+                <span className="status-type">{item.type}</span>
+              </div>
+            ))
+          ) : (
+            <></>
+          )}
 
         </div>
         <div className="view-actions">
@@ -96,9 +118,13 @@ const Home = () => {
         </div>
       </div>
       <div ref={projectsListRef} className="project-boxes jsGridView">
-        {boxItems.get.map((item, index) => (
-            <Box key={index} item={item} />
-          ))}
+      {isBox.length > 0 ? (
+            isBox.map((item, index) => (
+              <Box key={index} item={item} />
+            ))
+          ) : (
+            <></>
+          )}
       </div>
     </div>
   );

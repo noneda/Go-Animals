@@ -9,24 +9,51 @@ let Value = conf.conection.PORT ? conf.SECRET :`x6X9;C'-<0N<YN9`
 const Encrypt = (item) => {
     const iv = CryptoJS.lib.WordArray.random(16);
 
-    return JSON.parse(JSON.stringify(
+    return Array.isArray(item) ? (item.map(obj => JSON.parse(JSON.stringify(
         Object.fromEntries(
-            Object.entries(item).map(
-                ([key, value]) => [CryptoJS.AES.encrypt(key, Key, {iv}).toString(), CryptoJS.AES.encrypt(value, Value, {iv}).toString()]
+            Object.entries(obj).map(
+                ([key, value]) => [
+                    CryptoJS.AES.encrypt(key, Key, { iv }).toString(), 
+                    CryptoJS.AES.encrypt(value, Value, { iv }).toString()
+                ]
             )
         )
-    ));
+    )))) : (JSON.parse(JSON.stringify(
+        Object.fromEntries(
+            Object.entries(item).map(
+                ([key, value]) => [
+                    CryptoJS.AES.encrypt(key, Key, { iv }).toString(), 
+                    CryptoJS.AES.encrypt(value, Value, { iv }).toString()
+                ]
+            )
+        )
+    )));
 }
 
 
+
+
 const Decrypt = (item) => {
-    return JSON.parse(JSON.stringify(
+    return Array.isArray(item) ? (item.map(obj => JSON.parse(JSON.stringify(
         Object.fromEntries(
-            Object.entries(item).map(
-                ([key, value]) => [CryptoJS.AES.decrypt(key, Key).toString(CryptoJS.enc.Utf8), CryptoJS.AES.decrypt(value, Value).toString(CryptoJS.enc.Utf8)]
+            Object.entries(obj).map(
+                ([key, value]) => [
+                    CryptoJS.AES.decrypt(key, Key).toString(CryptoJS.enc.Utf8), 
+                    CryptoJS.AES.decrypt(value, Value).toString(CryptoJS.enc.Utf8)
+                ]
             )
         )
-    ));
+    )))) : (JSON.parse(JSON.stringify(
+        Object.fromEntries(
+            Object.entries(item).map(
+                ([key, value]) => [
+                    CryptoJS.AES.decrypt(key, Key).toString(CryptoJS.enc.Utf8), 
+                    CryptoJS.AES.decrypt(value, Value).toString(CryptoJS.enc.Utf8)
+                ]
+            )
+        )
+    )));
+    
 }
 
 /* 
