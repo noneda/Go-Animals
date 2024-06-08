@@ -64,7 +64,7 @@ const sendBox = async (req, res) => {
             backgroundFondo = "#E9F7EF";
             backgroundProgr = '#48C9B0';
             set = {
-                id : inventory.ID,
+                id : `${inventory.ID}`,
                 backgroundFondo: backgroundFondo,
                 backgroundProgr: backgroundProgr,
                 Product: oneFood.FNAME,
@@ -87,7 +87,7 @@ const sendBox = async (req, res) => {
             backgroundFondo = "#D4E6F1";
             backgroundProgr = '#5DADE2';
             set = {
-                id : inventory.ID,
+                id : `${inventory.ID}`,
                 backgroundFondo: backgroundFondo,
                 backgroundProgr: backgroundProgr,
                 Product: oneHygiene.HNAME,
@@ -110,7 +110,7 @@ const sendBox = async (req, res) => {
             backgroundFondo = "#FEF9E7";
             backgroundProgr = '#48C9B0';
             set = {
-                id : inventory.ID,
+                id : `${inventory.ID}`,
                 backgroundFondo: backgroundFondo,
                 backgroundProgr: backgroundProgr,
                 Product: oneClothe.CNAME,
@@ -164,7 +164,7 @@ const sendBoxs = async (req, res) => {
                 backgroundFondo = "#E9F7EF";
                 backgroundProgr = '#48C9B0';
                 box = {
-                    id : inventory.ID,
+                    id : `${inventory.ID}`,
                     backgroundFondo: backgroundFondo,
                     backgroundProgr: backgroundProgr,
                     Product: oneFood.FNAME,
@@ -187,7 +187,7 @@ const sendBoxs = async (req, res) => {
                 backgroundFondo = "#D4E6F1";
                 backgroundProgr = '#5DADE2';
                 box = {
-                    id : inventory.ID,
+                    id : `${inventory.ID}`,
                     backgroundFondo: backgroundFondo,
                     backgroundProgr: backgroundProgr,
                     Product: oneHygiene.HNAME,
@@ -210,7 +210,7 @@ const sendBoxs = async (req, res) => {
                 backgroundFondo = "#FEF9E7";
                 backgroundProgr = '#48C9B0';
                 box = {
-                    id : inventory.ID,
+                    id : `${inventory.ID}`,
                     backgroundFondo: backgroundFondo,
                     backgroundProgr: backgroundProgr,
                     Product: oneClothe.CNAME,

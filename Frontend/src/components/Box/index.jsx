@@ -10,7 +10,7 @@ const Box = ({ item }) => {
       <div className="project-box-header">
         <span>{item.Type}</span>
         <div className="more-wrapper">
-          <button className="project-btn-more" onClick={() => {setIsShow(true)}}>
+          <button className="project-btn-more" id= {item.id} title="Edit"onClick={() => {setIsShow(true)}}>
             <svg
               width="24"
               height="24"
@@ -43,22 +43,7 @@ const Box = ({ item }) => {
       </div>
       <div className="project-box-footer">
         <div className="participants">
-          <button className="add-participant" style={{ color: item.backgroundColor}} >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-plus"
-            >
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
-          </button>
+          
         </div>
         <div className="days-left" style={{ color: item.backgroundProgr }}>{item.Lote} Lote</div>
       </div>

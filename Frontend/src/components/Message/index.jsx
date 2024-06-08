@@ -5,12 +5,12 @@ const Message = () => {
         <div className="message-header">
             <div className="name">Estan en Produccion</div>
             <div className="star-checkbox">
-                <input type="checkbox" id="star-1" />
                 <label htmlFor="star-1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-star">
                         <polygon points="12 2 15 8 22 9 17 14 18 21 12 18 6 21 7 14 2 9 9 8 12 2" />
                     </svg>
                 </label>
+                <input type="checkbox" id="star-1" />
             </div>
         </div>
         <p className="message-line">No Disponible</p>
